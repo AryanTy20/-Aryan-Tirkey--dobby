@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://dobby-assignment.herokuapp.com/api";
+const baseURL = "https://dobby-project.herokuapp.com/api";
 
 export const customAxios = axios.create({
   baseURL,
