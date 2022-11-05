@@ -22,6 +22,9 @@ dbConnect();
 import { AuthRoutes, UserRoutes } from "./routes";
 app.use("/api/auth", AuthRoutes);
 app.use("/api/user", UserRoutes);
+app.use("/",(req,res)=>{
+  res.json("server running api")
+});
 
 // Error handler
 app.use((err, req, res, next) => {
