@@ -15,16 +15,17 @@ app.use(
   })
 );
 //DB Connection
-import { dbConnect } from "./dbConnect.js";
+import { dbConnect } from "./dbConnect";
 dbConnect();
 
 //Routes
 import { AuthRoutes, UserRoutes } from "./routes";
-app.use("/api/auth", AuthRoutes);
-app.use("/api/user", UserRoutes);
-app.use("/",(req,res)=>{
+app.get("/",(req,res)=>{
   res.json("server running api")
 });
+
+app.use("/api/auth", AuthRoutes);
+app.use("/api/user", UserRoutes);
 
 // Error handler
 app.use((err, req, res, next) => {
