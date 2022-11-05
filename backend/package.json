@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -r esm server"
+    "dev": "node -r esm server"
   },
   "license": "MIT",
   "dependencies": {
