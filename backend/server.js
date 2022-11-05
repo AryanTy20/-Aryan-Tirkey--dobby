@@ -15,7 +15,7 @@ app.use(
   })
 );
 //DB Connection
-import { dbConnect } from "./dbConnect";
+import { dbConnect } from "./dbConnect.js";
 dbConnect();
 
 //Routes
